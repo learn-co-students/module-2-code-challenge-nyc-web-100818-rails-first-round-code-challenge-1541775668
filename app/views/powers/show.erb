@@ -1,0 +1,17 @@
+<%# power show page should have its name and description. %>
+<h1 align="center">Power!</h1>
+<br><br>
+<u>Power</u>:   <%= @power.name %><br><br>
+<u>Description</u>:<%= @power.description %><br><br>
+<br><br><br>
+Heroines With This Power:
+<ul>
+<% @heroines_by_power.each do |h| %>
+
+<li><%= link_to "#{h.super_name}", heroine_path(h) %></li><br>
+<% end %>
+</ul>
+<br><br><br>
+
+<%= link_to 'Heroines Page', heroines_path %>  ||  <%= link_to 'Superpowers Page', powers_path %>
+<br><br>

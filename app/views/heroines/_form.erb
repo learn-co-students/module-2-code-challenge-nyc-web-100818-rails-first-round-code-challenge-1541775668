@@ -1,0 +1,8 @@
+
+<%= form_for @heroine do |f| %>
+    Civilian Name: <%= f.text_field :name %>
+    Superheroine Name: <%= f.text_field :super_name %>
+    <%= f.label :power_id %>
+    <%= f.collection_select(:power_id, @powers, :id, :name, prompt: true) %>
+    <%= f.submit %>
+  <% end %>
