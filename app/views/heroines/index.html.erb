@@ -3,8 +3,28 @@
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<%# almost got it, but this search bar don't work %>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:cheese, "Search for Heroine by Power:") %>
+  <%= text_field_tag(:sauce) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%# <% if @search_heroines != [] %> %>
+<!-- <ul> -->
+  <%# <% @search_heroines.each do |heroine| %> %>
+    <!-- <li> -->
+      <%# <%= link_to heroine.super_name, heroine %> %>
+    <!-- </li> -->
+    <!-- <br> -->
+  <%# <% end %> %>
+  <%# <% else %> %>
+  <!-- <p>no search terms yet </p> -->
+<!-- </ul> -->
+<%# <% end %> %>

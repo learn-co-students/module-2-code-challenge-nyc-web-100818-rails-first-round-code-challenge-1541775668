@@ -1,0 +1,7 @@
+<%= @power.name %><br>
+<%= @power.description %><br>
+<% if @power.heroines %>
+<% @power.heroines.each do |heroine| %>
+<%= link_to heroine.super_name, heroine %><br>
+<% end %>
+<% end %>
