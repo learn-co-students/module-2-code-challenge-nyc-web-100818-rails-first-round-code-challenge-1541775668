@@ -23,6 +23,10 @@ class HeroinesController < ApplicationController
     end
   end
 
+  def search 
+    @heroine = Heroine.find_by(name: params[:q])
+  end 
+
   private
 
   def heroine_params
