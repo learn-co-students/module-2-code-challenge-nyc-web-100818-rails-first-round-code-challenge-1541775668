@@ -1,0 +1,10 @@
+
+<h1>Show Page of Heroine</h1>
+
+<p>
+Heroine's Name: <%=@heroine.name  %><br>
+<br>
+Heroine's Super Name: <%= @heroine.super_name %><br>
+<br>
+Heroine's Super Power: <%= link_to @heroine.power.name ,powers_path(@power)  %><br>
+</p>
