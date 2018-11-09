@@ -1,10 +1,26 @@
 <h2>All Heroines</h2>
 
+<!-- I can't tell if this attribute is an existing one or one we make up
+because doing :power wouldn't make sense since that's a whole object so im thinking power.name
+or :power_name????????
+-->
+<%= form_tag("/heroines", method: "get") do %>
+  <%= label_tag(:power_name, "Search for:") %>
+  <%= text_field_tag(:power_name) %>
+  <%= submit_tag("Search by powah") %>
+<% end %>
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      Super Name: <%= heroine.super_name %> - - Real Name: <%= link_to heroine.name, heroine %>
     </li>
     <br>
   <% end %>
 </ul>
+<br>
+
+<h3><%= link_to "Create a new heroine", new_heroine_path %></h3>
+
+
+<img src="https://www.dckids.com/Portals/2/Content/Hero/DCSHG_Downloads_Hero/Source/Default/DownloadsCharacter.png" alt="">

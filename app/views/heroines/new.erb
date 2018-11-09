@@ -1,0 +1,12 @@
+<h1>Make a new heroine!</h1>
+
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+<% end %>
+
+<%= render 'form' %>
+
+<img src="https://www.dckids.com/Portals/2/Content/Hero/DCSHG_Landing_Hero/Source/Default/HeroImage_Landing.png" alt="heroines">
