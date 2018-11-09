@@ -24,7 +24,7 @@ class HeroinesController < ApplicationController
   end
 
   def search 
-    @heroine = Heroine.find_by(name: params[:q])
+    @power = Power.find_by(name: params[:q])
   end 
 
   private

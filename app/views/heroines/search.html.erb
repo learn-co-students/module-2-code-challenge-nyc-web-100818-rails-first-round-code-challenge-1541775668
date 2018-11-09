@@ -1,7 +1,4 @@
-<h2>filtered Heroines</h2>
-
-<%= @heroine.name %>
-<br>
-<%= @heroine.super_name %>
-<br>
-<%= @heroine.power.name %>
+<% @power.heroines.each do |heroine| %>
+  <%=heroine.name %>
+  <br>
+<% end  %>
