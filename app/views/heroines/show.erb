@@ -1,0 +1,9 @@
+
+<h1> <%= @heroine.name %> </h1>
+
+  <p><u>Civilian Name</u>: <%= @heroine.name  %></p>
+  <p><u>SuperHeroine Name</u>:  <%= @heroine.super_name %></p>
+  <p><u>SUPER-Power</u>: <%= link_to @heroine.power.name.upcase, power_path(@heroine.power) %>!</p>
+<br><br><br>
+
+<%= link_to 'Heroines Page', heroines_path %>  ||  <%= link_to 'Superpowers Page', powers_path %>
