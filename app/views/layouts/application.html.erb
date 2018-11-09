@@ -4,11 +4,44 @@
     <title>ImmersiveRailsAssessment</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <style >
 
+    .header {
+      padding: 3px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+      font-size: 10px;
+    }
+    .footer {
+      padding: 3px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+      font-size: 15px;
+
+    }
+  </style>
+
+  <div class="header">
+    <h1>Module 2 Code Challenge</h1>
+    <h3>Can't wait for project weeeeeeeek</h3>
+    <p>Please let me pass =)</p>
+
+
+  </div>
+  <nav>
+    <%= link_to 'All Heroines', heroines_path%>
+    <%= link_to 'All Superpowers', powers_path%>
+    <%= link_to 'Create New Heroine', new_heroine_path%>
+  </nav>
   <body>
     <%= yield %>
   </body>
+  <div class="footer">
+    <p>Have a nice day!</p>
+  </div>
 </html>
