@@ -1,0 +1,14 @@
+<center><h1>SHOW ME THE POWER</h1>
+
+Name: <%= @power.name %><br><br><br>
+Description: <%= @power.description %><br><br><br>
+
+<strong>Heroines</strong> <br>
+<% @power.heroines.each do |heroine| %>
+ <%= link_to heroine.super_name, heroine %><br><br>
+<% end %><br><br><br>
+
+<%= link_to "Back to all Powers", powers_path %><br><br><br>
+<!-- <%= link_to "Edit Power", edit_power_path(@power) %><br><br><br>
+<%= link_to "Delete Power", power_path(@power), method: :delete %> -->
+</center>
