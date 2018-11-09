@@ -1,10 +1,20 @@
-<h2>All Heroines</h2>
+<!-- On the heroines index page, a heroine's name should link to the heroine's show page. -->
+
+<!-- 8. Add a filter to the index view of the heroines. This will allow the visitor to search for an existing power and display all the heroines with that power on the same view page. -->
+
+<!-- 3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  -->
+
+<h1>All Heroines</h1>
 
 <ul>
   <% @heroines.each do |heroine| %>
-    <li>
-      <%= heroine.super_name %>
-    </li>
+  <h3>  <%= link_to heroine.name, heroine %>  </h3>
+    <li><%= heroine.super_name %></li>
+    <li> <%= heroine.power.name.capitalize %> </li>
     <br>
   <% end %>
+
+
+
+
 </ul>
