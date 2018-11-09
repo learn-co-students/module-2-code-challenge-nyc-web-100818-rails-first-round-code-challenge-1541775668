@@ -28,17 +28,17 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 ![Showcasing the basic heroines and powers routes](heroines_and_powers.gif)
 
-1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations.
+1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the heroines and powers have been created with the proper relations. -- Completed
 
-2. On the heroines index page, a heroine's name should link to the heroine's show page.
+2. On the heroines index page, a heroine's name should link to the heroine's show page. -- Completed
 
-3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
+3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page. -- Completed
 
-4. The power show page should have its name and description.
+4. The power show page should have its name and description. -- Completed
 
-5. As a visitor to the website, I should be able to create a new heroine with her name and super name.
+5. As a visitor to the website, I should be able to create a new heroine with her name and super name. -- Completed
 
-6. The form should also allow each heroine to be created with **only one of the existing powers**.
+6. The form should also allow each heroine to be created with **only one of the existing powers**. -- Completed
 
   ![A form for adding a new heroine](new_heroine_form.gif)
 
