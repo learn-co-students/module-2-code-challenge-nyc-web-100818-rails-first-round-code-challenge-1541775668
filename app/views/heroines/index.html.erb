@@ -9,6 +9,7 @@
   <% end %>
 </ul>
 
+<!-- makes a valid search only if power exists, didnt have time for 404 -->
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q) %>
