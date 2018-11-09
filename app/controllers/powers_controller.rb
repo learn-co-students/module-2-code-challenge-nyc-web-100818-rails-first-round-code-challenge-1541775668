@@ -22,20 +22,29 @@ class PowersController < ApplicationController
   end
 
   def create
-    ### METHOD NOT FINISHED 
     @power = Power.create(power_params)
     params[:power][:heroine_ids].each do |heroine_id|
-      h = Heroine.find_by(id: heroine_id)
-      h.update(power_id: @power.id)
+      person = Heroine.find_by(id: heroine_id)
+        if person
+          person.update(power_id: @power.id)
+        end
     end
+    redirect_to @power
   end
 
   def update
-    #code
+    @power.update(power_params)
+    params[:power][:heroine_ids].each do |heroine_id|
+      person = Heroine.find_by(id: heroine_id)
+        if person
+          person.update(power_id: @power.id)
+        end
+    end
+    redirect_to @power
   end
 
   def edit
-    #code
+    @heroines = Heroine.all
   end
 
   def destroy
