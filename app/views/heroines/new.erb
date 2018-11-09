@@ -1,0 +1,8 @@
+<h1>Create your heroine</h1>
+<% if flash[:errors] %>
+<%= flash[:errors].each do |e| %>
+  <%= e %>
+  <% end %>
+<% end %>
+
+<%= render "form" %>

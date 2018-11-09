@@ -1,9 +1,16 @@
 <h2>All Heroines</h2>
 
+<%# #this is wrong... need to go link heroine w power.. %>
+<%= form_tag(powers_path, method: :get) do %>
+<%= label_tag(:power_id, "Search for:") %>
+<%= text_field_tag(:power_name) %>
+<%= submit_tag("Search") %>
+<% end %>
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to "#{heroine.super_name}", heroine %>
     </li>
     <br>
   <% end %>
