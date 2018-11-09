@@ -1,0 +1,11 @@
+<h3>Search by Superpower:</h3>
+
+<%= form_tag heroines_path, method: :get do %>
+  <%= text_field_tag :q, "", list: "powers" %>
+  <datalist id="powers">
+    <% @powers.each do |power| %>
+      <option value="<%= power.name %>"></option>
+    <% end %>
+  </datalist>
+  <%= submit_tag "Search" %>
+<% end %>
