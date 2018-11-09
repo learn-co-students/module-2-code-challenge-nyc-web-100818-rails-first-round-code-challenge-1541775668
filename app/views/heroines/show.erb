@@ -1,0 +1,8 @@
+<%# The heroine show page should include the heroine's name (eg. Kamala Khan),  %>
+<%# her super name (eg. Ms. Marvel),  %>
+<%# and her power.  %>
+<%# The power should link to the power show page.   %>
+
+<h1><%= "#{@heroine.super_name.upcase} is the alter ego of #{@heroine.name}"%></h1>
+<h3> and they have the power of <%= link_to @heroine.power.name, @heroine.power%></h3>
+<%= link_to "Change Heroine", edit_heroine_path(@heroine) %>
