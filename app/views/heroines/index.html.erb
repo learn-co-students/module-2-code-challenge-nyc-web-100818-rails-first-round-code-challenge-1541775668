@@ -1,9 +1,21 @@
 <h2>All Heroines</h2>
 
+<!-- I'm working on the bonus deliverable here, I'm reading through the search
+form documentation here,
+https://guides.rubyonrails.org/form_helpers.html#a-generic-search-form,
+but can't figure out what's going on exactly. At first I was getting a route
+error so I added a custom route to my config/routes.rb file but I'm not sure if
+that's what was required either. -->
+<%= form_tag("/search", method: "get") do %>
+  <strong><%= label_tag(:power_id, "Search By Superpower:") %></strong><br>
+  <%= text_field_tag(:power_id) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine %>
     </li>
     <br>
   <% end %>
