@@ -4,7 +4,7 @@ class HeroinesController < ApplicationController
 
   def index 
     # find_powers
-    @heroines = params[:q] ? Heroine.filter_by_power(params[:q]) : Heroine.all
+    @heroines = params[:q] ? Heroine.by_power(params[:q]) : Heroine.all
   end
 
   def show

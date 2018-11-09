@@ -3,7 +3,6 @@ class Heroine < ApplicationRecord
 
   validates :super_name, uniqueness: true
 
-  def self.filter_by_power(power)
-    self.joins(:power).where("powers.name like ?", "%#{power}%")
-  end
+  scope :by_power, -> (power) { joins(:power).where("powers.name like ?", "%#{power}%") }
+
 end
