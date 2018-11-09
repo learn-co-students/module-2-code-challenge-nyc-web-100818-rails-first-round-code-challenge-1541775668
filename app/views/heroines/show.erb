@@ -1,0 +1,18 @@
+<h1>Heroine Show Page</h1>
+
+Name: <%= @heroine.name %>
+<br>
+<br>
+AKA: <%= @heroine.super_name %>
+<br>
+<br>
+Power: <%= link_to @power.name, @power %>
+<br>
+<br>
+<%= link_to "Edit Heroine", edit_heroine_path %>
+<br>
+<br>
+<%= link_to "View All Heroines", heroines_path %>
+<br>
+<br>
+<%= link_to "Delete Heroine", @heroine, method: :delete, data: { confirm: "Really?" } %>

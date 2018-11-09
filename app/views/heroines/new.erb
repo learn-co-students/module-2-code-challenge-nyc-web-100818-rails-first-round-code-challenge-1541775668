@@ -1,0 +1,13 @@
+<h1>New Heroine Form</h1>
+
+<% if flash[:errors] %>
+  <ol>
+    ERROR(s):
+    <br>
+    <% flash[:errors].each do |error| %>
+       <li><%= p error %></li>
+    <% end  %>
+  </ol>
+<% end %>
+
+<%= render "form" %>

@@ -1,0 +1,22 @@
+<h1>Power Show Page</h1>
+
+Power: <p><%= @power.name %></p>
+<br>
+<br>
+Description: <p><%= @power.description %></p>
+<h2>Heroines With Power</h2>
+<ol>
+  <% @heroines.each do |heroine| %>
+    <li>
+      <%= link_to heroine.super_name, heroine %>
+    </li>
+  <% end %>
+</ol>
+<br>
+<%= link_to "View All Powers", powers_path %>
+<br>
+<br>
+<%= link_to "View All Heroines", heroines_path %>
+<br>
+<br>
+<%= link_to "Delete Power", @power, method: :delete, data: { confirm: "WARNING!!! If you delete this power all associated Heroines will be deleted. Are you sure you want to continue? "} %>

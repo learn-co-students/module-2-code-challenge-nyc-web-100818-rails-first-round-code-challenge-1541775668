@@ -1,0 +1,15 @@
+<%= form_for @power do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+  <br>
+  <h4>Choose Heroine (The ones you choose will loose their old power)</h4> 
+  <%= f.collection_check_boxes :heroine_ids, @heroines, :id, :name %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
